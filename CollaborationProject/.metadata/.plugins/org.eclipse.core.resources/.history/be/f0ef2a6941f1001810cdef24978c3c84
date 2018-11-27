@@ -1,0 +1,26 @@
+package com.niit.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class Friend {
+
+	    @Id
+	    @GeneratedValue
+	    private int id;
+	     
+	    @ManyToOne
+	    private User fromId;
+	     
+	     
+	    @ManyToOne
+	    private User toId;
+	     
+	    private char status;

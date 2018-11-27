@@ -1,0 +1,21 @@
+<div class="container"  ng-controller="blogController" ng-init="listAllBlogs()">
+
+<h2><i class="fa fa-th-list"></i> All Blog's</h2>
+<div class="panel panel-primary col-md-8" ng-repeat="blog in allBlogs">
+<table class="table-responsive">
+<tr>
+  <td> Blog Name : </td>
+  <td>{{blog.blogName}}</td>
+  </tr>
+<tr>  
+  <td> Blog Content : </td>
+  <td>{{blog.blogContent}}</td>
+</tr>
+
+<tr>
+	<td> Like: </td>
+	<td><i class="fa fa-thumbs-up" style="font-size:20px"></i></td>
+</tr> 
+</table>
+</div>
+</div>

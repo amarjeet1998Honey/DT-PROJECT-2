@@ -1,0 +1,9 @@
+<div class="container"  ng-controller="userController" ng-init="fetchUserDetails()">
+
+<h2><i class="fa fa-th-list"></i> Details </h2>
+<h4>Sort By Date :<a ng-click=></a></h4>
+<div class="col-md-12">
+<div class="thumbnail">
+<h2></h2>
+</div>
+</div>

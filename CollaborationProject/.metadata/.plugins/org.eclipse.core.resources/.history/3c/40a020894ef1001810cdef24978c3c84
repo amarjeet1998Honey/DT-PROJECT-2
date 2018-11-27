@@ -1,0 +1,28 @@
+<style>
+.t{
+padding-top:150px; 
+}
+</style>
+<div class="t" ng-controller="friendController">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		<div align="center">
+			<font size="7"><i>Friend Requests</i></font>
+		</div></div>
+		<div class="panel-body">
+		<h2 ng-if="pendingRequests.length==0">No Pending Requests</h2>
+			<ul style="list-style: none">
+			<!-- pendingRequests - List<Friend>  -->
+				<li ng-repeat="request in pendingRequests">
+				<b><h2>Email </b>: {{request.fromId.loginName}}</h2>
+				<b><h2>Name :</b> {{request.fromId.firstname}}&nbsp;{{request.fromId.lastname}}</h2>
+				<b><h2>Phone number :</b> {{request.fromId.phonenumber}}</h2>
+				<!-- <img src="http://localhost:8081/Middleware//getimage/{{request.fromId.email}}" height="200px" width="200px"><br><br> -->
+				<button type="button" class="btn btn-primary" style="width:90px; height:45px" ng-click="acceptRequest(request)" ><font size="4">Accept</font></button>
+				<button type="button" class="btn btn-warning" style="width:90px; height:45px" ng-click="deleteRequest(request)"><font size="4">Delete</font></button><br><br>
+				</li>
+			</ul><br>
+		</div>
+	</div>
+
+</div>

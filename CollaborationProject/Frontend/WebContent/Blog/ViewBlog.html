@@ -1,0 +1,33 @@
+
+<div class="container"  ng-controller="blogController" ng-init="listAllBlogs()">
+
+<h2><i class="fa fa-th-list"></i> All Blog's</h2>
+<div class="panel panel-primary col-md-8" ng-repeat="blog in allBlogs">
+<table class="table-responsive">
+<tr>
+  <td> Blog Name : </td>
+  <td>{{blog.blogName}}</td>
+  </tr>
+<tr>  
+  <td> Blog Content : </td>
+  <td>{{blog.blogContent}}</td>
+</tr>
+
+<tr>
+	<td>Like: {{blog.likes}} </td>
+	<td><a ng-click="incrementLikes(blog.blogId)"><i class="fa fa-thumbs-up" style="font-size:20px"></i></a></td>
+</tr>  
+<tr>
+	<td>Status</td> 
+	<td><i class="fa fa-check" aria-hidden="true" style="color:green"></i>{{blog.status}}</td>
+</tr>
+
+<tr>
+<td><button type="submit" class="btn btn-success" ng-hide="currentUser.role=='ROLE_ADMIN'" ng-click="addBlogComment(blog.blogId)"><span class="glyphicon glyphicon-comment"></span> Comment</button></td>
+</tr>
+
+</table>
+<br>
+<a href="#!ViewAllComments">View All Comments</a>
+</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container"  ng-controller="forumController" ng-init="listAllPendingForums()">
+
+<h2><i class="fa fa-th-list"></i> All Pending Forum's</h2>
+<div class="panel panel-primary" ng-repeat="forum in allForums">
+<table class="table-responsive">
+<tr>
+  <td> Forum Name : </td>
+  <td>{{forum.forumName}}</td>
+  </tr>
+<tr>  
+  <td> Forum Content : </td>
+  <td>{{forum.forumContent}}</td>
+</tr>
+ 
+<tr>
+	<td>Status</td>
+	<td>{{forum.status}}</td>
+</tr>
+<tr>
+	<td><button type="submit" class="btn btn-success" ng-show="currentUser.role=='ROLE_ADMIN'" ng-click="approveForum(forum.forumId)">Approve</button></td>
+	<td><button type="submit" class="btn btn-danger" ng-show="currentUser.role=='ROLE_ADMIN'" ng-click="rejectForum(forum.forumId)">Reject</button></td>
+</tr>
+ 
+<br>
+<br>
+
+
+</table>
+</div>
+</div>

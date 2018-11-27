@@ -1,0 +1,17 @@
+<style>
+.t{
+margin-left:40px;
+padding-top:130px; 
+}
+</style>
+<div class="t">
+<div align="center"><font size="8"><i><b>Friend List</b></i></font></div>
+<ul style="list-style:none">
+<li ng-repeat="Friend in Friends">
+<h3><i><b>Email : </b></i> {{friend.email}}</h3>
+<h3><i><b>Name : </b></i> {{friend.firstname}}&nbsp;{{friend.lastname}}</h3>
+<h3><i><b>Phone No : </b></i> {{friend.phonenumber}}</h3><br>
+<!-- <img src="http://localhost:8081/Middleware//getimage/{{friend.email}}" height="100px" width="100px" style="margin-left:70px"><br><br> -->
+</li>
+</ul>
+</div>

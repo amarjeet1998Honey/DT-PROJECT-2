@@ -1,0 +1,24 @@
+
+
+<div class="container"  ng-controller="forumController" ng-init="listAllForums()">
+
+<h2><i class="fa fa-th-list"></i> All Forum's</h2>
+<div class="panel panel-danger col-md-8" ng-repeat="forum in allForums">
+<table class="table-responsive">
+<tr>
+  <td> Forum Name:</td>
+  <td>{{forum.forumName}}</td>
+  </tr>
+  <tr>
+  <td> Forum Content:</td>
+  <td>{{forum.forumContent}}</td>
+  </tr>
+  <br>
+  <br>
+  <tr>
+	<td>Status:</td>
+	<td><i class="fa fa-check" aria-hidden="true" style="color:green"></i>{{forum.status}}</td>
+</tr>
+  </table>
+</div>
+</div>

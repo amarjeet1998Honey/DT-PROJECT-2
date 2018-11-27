@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;FriendService.js&apos; to &apos;Friend&apos;" description="Move &apos;FriendService.js&apos; to &apos;Friend&apos;" destination="WebContent/Friend" element1="WebContent/js/FriendService.js" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1543218211079" updateReferences="true"/>
+</session>

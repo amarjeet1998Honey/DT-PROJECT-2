@@ -1,0 +1,38 @@
+<div class="container">
+<br>
+<br>
+<div class="thumbnail" align="center"  style="background-color:#4caf50;">
+<h2><i class="fa fa-hand-peace-o" style="font-size:30px"></i> Welcome!</h2>
+<h4>Blogger is a messaging app for teams.</h4>
+</div>
+
+<!-- <marquee></marquee> -->
+
+<div class="rows">
+<br>
+<br>
+<div class="col-md-12">
+<div class="col-md-4">
+<div class="thumbnail"style="background-color:silver;" align="center">
+<a href="#!addBlog" ng-hide="currentUser.role=='ROLE_ADMIN'"><i class="fa fa-plus" aria-hidden="true"></i><h3>Add Blog</h3></a><br>
+<a href="#!ViewBlog"><i class="fa fa-eye"  aria-hidden="true"></i><h3>View Blog</h3></a>
+<a href="#!ViewPendingBlogs" ng-show="currentUser.role=='ROLE_ADMIN'"><i class="fa fa-eye"  aria-hidden="true"></i><h3>View Pending Blogs</h3></a>
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail"style="background-color:silver;" align="center">
+<a href="#!AddForum" ng-hide="currentUser.role=='ROLE_ADMIN'"><i class="fa fa-plus" aria-hidden="true"></i><h3>Add Forum</h3></a><br>
+<a href="#!ViewForum"><i class="fa fa-eye"  aria-hidden="true"></i><h3>View Forum</h3></a>
+<a href="#!ViewPendingForums" ng-show="currentUser.role=='ROLE_ADMIN'"><i class="fa fa-eye"  aria-hidden="true"></i><h3>View Pending Forums</h3></a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="thumbnail"style="background-color:silver;" align="center">
+<a href="#!addJob" ng-hide="currentUser.role=='ROLE_USER'"><i class="fa fa-plus" aria-hidden="true"></i><h3>Add Job</h3></a><br>
+<a href="#!ViewJob"><i class="fa fa-eye"  aria-hidden="true"></i><h3>View Job</h3></a>
+</div>
+</div>
+</div>
+</div>
+</div>

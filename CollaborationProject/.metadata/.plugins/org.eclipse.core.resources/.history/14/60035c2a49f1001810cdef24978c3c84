@@ -1,0 +1,24 @@
+<style>
+.t{
+padding-top:130px; 
+}
+</style>
+<div class="t">
+<div align="center"><font size="7"><i><b>Suggested Users</b></i></font></div><br><br>
+<h1 ng-if="suggestedUsers.length==0">No Suggested Users</h1>
+<div class="container">
+<br><table class="table table-striped">
+<tr ng-repeat="user in suggestedUsers">
+<td><h2><b>Email : </b>{{user.email}}</h2>
+<h2><b>Name :</b> {{user.firstname}} &nbsp;{{user.lastname}}</h2>
+<h2><b>Phone Number : </b>{{user.phonenumber}}</h2>
+</td>
+<!-- <td>
+<img src="http://localhost:8081/Middleware//getimage/{{user.email}}" alt="No Image" height="150px" width="150px" style="margin-top:10px">
+</td> -->
+<td>
+<button type="button" class="btn btn-primary" ng-click="addFriend(user)" style="margin-top:70px">Add Friend</button>
+</td>
+</tr>
+</table></div>
+</div>

@@ -1,0 +1,15 @@
+<style>
+.t{
+margin-left:40px;
+padding-top:130px; 
+}
+</style>
+<div class="t" ng-controller="friendController" ng-init="getAllFriends()">
+<div align="center"><font size="8"><i><b>Friend List</b></i></font></div>
+<ul style="list-style:none">
+<li ng-repeat="friend in friends">
+<h3><i><b>Login Name : </b></i> {{friend}}</h3>
+<img src="http://localhost:8081/Middleware/viewProfilePicture/{{friend}}" height="100px" width="100px" style="margin-left:70px"><br><br>
+</li>
+</ul>
+</div>

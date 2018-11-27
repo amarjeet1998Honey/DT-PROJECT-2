@@ -1,0 +1,16 @@
+<div class="container"  ng-controller="userController" ng-init="fetchUserDetails()">
+
+<h2><i class="fa fa-th-list"></i> Details </h2>
+<div class="col-md-12" align="center">
+<div class="thumbnail">
+<img id="img1"  
+					src="http://localhost:8081/Middleware/viewProfilePicture/{{currentUser.loginName}}"
+						onerror="if (this.src != 'images\\profilepicture.png') this.src = 'images\\profilepicture.png';"
+				
+					style="height:50px;width:80px" onshow="checkSRC">
+<h2>{{currentUser.firstName}} {{currentUser.lastName}}</h2>
+<br>
+<li>First Name:{{user.firstName}}</li>
+</div>
+</div>
+</div>

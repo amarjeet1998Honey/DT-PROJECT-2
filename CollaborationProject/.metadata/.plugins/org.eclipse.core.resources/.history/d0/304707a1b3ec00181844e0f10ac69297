@@ -1,0 +1,85 @@
+package com.niit.daoImpl;
+
+import java.util.List;
+
+import com.niit.dao.FriendDao;
+import com.niit.dto.Friend;
+import com.niit.dto.User;
+
+@Repository("friendDAO")
+@Transactional
+public class FriendDaoImpl implements FriendDao {
+
+	@Autowired
+    SessionFactory sessionFactory;
+	
+	public boolean sendFriendRequest(Friend friend) {
+		try{
+            System.out.println("In Send Friend Request function");
+            Session session=sessionFactory.getCurrentSession();
+            friend.setStatus("Pending");
+            session.save(friend);
+            System.out.println("Friend Request Sent..");
+            return true;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+	}
+
+	public boolean deleteFriendRequest(int friendId) {
+		try{
+            System.out.println("In Delete Friend Request function...");
+            Session session=sessionFactory.getCurrentSession();
+            Friend friend=(Friend)session.get(Friend.class, friendId);
+            if(friend.getStatus().equals("Pending")){
+                session.delete(friend);
+                System.out.println("Friend Request Deleted...");
+            }
+         
+            return true;
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+	}
+
+	public List<User> showSuggestedFriend(String loginname) {
+		String sql="select loginname from userdetails where loginname not in (select friendloginname from Friend where loginname='"+loginname+"') and loginname!='"+loginname+"' and role='Role_User'";
+        System.out.println(sql);
+        Session session=sessionFactory.openSession();
+        SQLQuery query=session.createSQLQuery(sql);
+        List<Object> suggestFriendname=(List<Object>)query.list();
+        List<UserDetails> suggestFriendList=new ArrayList<UserDetails>();
+        int i=0;
+        while(i<suggestFriendname.size())
+        {
+            UserDetails userDetail=(UserDetails)session.get(UserDetails.class, (String)suggestFriendname.get(i));
+            suggestFriendList.add(userDetail);
+            i++;
+        }
+        System.out.println("Suggested Friends : "+suggestFriendList);
+        return suggestFriendList;
+    }
+	}
+
+	public List<Friend> showAllFriends(String loginname) {
+		Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("from Friend where loginName =:currentuser and status='Approved')");
+        query.setParameter("currentuser", loginname);
+        List<Friend> listFriends = (List<Friend>) query.list();
+        return listFriends;
+
+	public List<Friend> showRequestPendingList(String loginname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean acceptFriendRequest(int friendId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

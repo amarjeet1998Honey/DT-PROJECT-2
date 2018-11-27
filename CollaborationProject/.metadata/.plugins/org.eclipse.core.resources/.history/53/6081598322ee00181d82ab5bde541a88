@@ -1,0 +1,24 @@
+<div class="container"  ng-controller="userController" ng-init="fetchUserDetails()">
+
+<h2><i class="fa fa-th-list"></i> Details </h2>
+<div class="col-md-12" align="center">
+<div class="thumbnail">
+<br>
+<img id="img1"  
+					src="http://localhost:8081/Middleware/viewProfilePicture/{{currentUser.loginName}}"
+						onerror="if (this.src != 'images\\profilepicture.png') this.src = 'images\\profilepicture.png';"
+				
+					style="height:100px;width:120px" onshow="checkSRC" class="img-responsive">
+<h2>{{currentUser.firstName}} {{currentUser.lastName}}</h2>
+
+<a href="#!UploadProfilePicture"><i class="fa fa-upload" style="font-size:25px"></i></a><a href="#!UpdateProfile"><i class="fa fa-edit" style="font-size:25px"></i></a>
+<hr>
+<h4>{{user.firstName}}</h4>
+<h4>{{user.lastName}}</h4>
+<h4>{{user.loginName}}</h4>
+<h4>{{user.email}}</h4>
+<h4>{{user.role}}</h4>
+<h4>{{user.mobileNumber}}</h4>
+</div>
+</div>
+</div>

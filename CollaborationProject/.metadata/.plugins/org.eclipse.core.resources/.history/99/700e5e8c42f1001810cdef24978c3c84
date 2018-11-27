@@ -1,0 +1,7 @@
+package com.niit.dto;
+
+public class ErrorClazz {
+
+	private int code;
+    private String message;
+}

@@ -1,0 +1,16 @@
+package com.niit.dao;
+
+import java.util.List;
+
+import com.niit.dto.Friend;
+import com.niit.dto.User;
+
+public interface FriendDao {
+
+	    public boolean sendFriendRequest(Friend friend);
+	    public boolean deleteFriendRequest(int friendId);
+	    public List<User> showSuggestedFriend(String loginname);
+	    public List<Friend> showAllFriends(String loginname);
+	    public List<Friend> showRequestPendingList(String loginname);
+	    public boolean acceptFriendRequest(int friendId);
+}

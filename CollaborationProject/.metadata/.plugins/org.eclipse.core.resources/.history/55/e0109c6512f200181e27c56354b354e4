@@ -1,0 +1,5 @@
+package com.niit.dto;
+
+public class Chat {
+
+}

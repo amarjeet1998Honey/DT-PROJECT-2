@@ -1,0 +1,23 @@
+
+<div class="container" ng-controller="forumController">
+
+<h2>Add Forum</h2>
+
+<br>
+<form>
+
+  <div class="form-group">
+    <label for="forumName">Forum Name:</label>
+    <input type="text" class="form-control" id="forumName" ng-model="forum.forumName">
+  </div>
+  <div class="form-group">
+    <label for="forumContent">Forum Content:</label>
+     <textarea class="form-control" id="forumContent" name="comments" placeholder="Comment" rows="5" ng-model="forum.forumContent"></textarea>
+  </div>
+  <button type="submit" class="btn btn-warning" ng-click="addForum()">Add Forum</button>
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<div class="container" ng-controller="blogController" >
+
+<h2>Add Comment</h2>
+
+
+<br>
+<form>
+  <div class="form-group">
+    <label for="blogContent">Comment: {{blogComment.blogId}}</label>
+    <textarea class="form-control" id="blogContent" name="comments" placeholder="Comment........." rows="5" ng-model="blogComment.commentText"></textarea>
+  </div>
+  <button type="submit" class="btn btn-warning" ng-click="addBlogCommentProcess(blogComment.blogId)">Post</button>
+</form>
+
+</div>

@@ -1,0 +1,39 @@
+<div class="container"  ng-controller="userController" ng-init="listAllJobs()">
+
+<h2><i class="fa fa-th-list"></i> All Job's </h2>
+<h4>Sort By Date :<a ng-click=></a></h4>
+<div class="panel panel-primary" ng-repeat="job in allJobs">
+<table class="table-responsive">
+<br>
+<tr>
+  <td> Job Designation : </td>
+  <td>{{job.jobDesignation}}</td>
+  </tr>
+  
+<tr>  
+  <td> Job Description : </td>
+  <td>{{job.jobDesc}}</td>
+</tr>
+
+<tr>  
+  <td> Company : </td>
+  <td>{{job.company}}</td>
+</tr>
+
+<tr>  
+  <td> Salary: </td>
+  <td>{{job.salary}}</td>
+</tr>
+ 
+ <tr>  
+  <td> Location: </td>
+  <td>{{job.location}}</td>
+</tr>
+
+<tr>  
+  <td> Last Date To Apply: </td>
+  <td>{{job.lastDateApply}}</td>
+</tr>
+</table>
+</div>
+</div>

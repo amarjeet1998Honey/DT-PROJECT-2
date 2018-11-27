@@ -1,0 +1,35 @@
+<div class="container" ng-controller="jobController">
+
+<h2>Add Job</h2>
+
+<br>
+<form>
+
+  <div class="form-group">
+    <label for="jobDesignation">Job Designation:</label>
+    <input type="text" class="form-control" placeholder="Job Designation" id="jobDesignation" ng-model="job.jobDesignation">
+  </div>
+  <div class="form-group">
+    <label for="jobDesc">Job Description:</label>
+    <textarea class="form-control" id="jobDesc" name="comments" placeholder="Job Description" rows="4" ng-model="job.jobDesc"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="company">Company:</label>
+    <input type="text" class="form-control" placeholder="Company Name" id="company" ng-model="job.company">
+  </div>
+  <div class="form-group">
+    <label for="salary">Salary:</label>
+    <input type="text" class="form-control" placeholder="Salary" id="salary" ng-model="job.salary">
+  </div>
+  <div class="form-group">
+    <label for="loaction">Location:</label>
+    <input type="text" class="form-control" placeholder="Loaction" id="location" ng-model="job.location">
+  </div>
+   <div class="form-group">
+    <label for="lastDate">Last Date To Apply:</label>
+    <input type="text" class="form-control" placeholder="Last Date To Apply" id="lastDate" ng-model="job.lastDateApply">
+  </div>
+  <button type="submit" class="btn btn-warning" ng-click="addJob()">Add Job</button>
+</form>
+
+</div>

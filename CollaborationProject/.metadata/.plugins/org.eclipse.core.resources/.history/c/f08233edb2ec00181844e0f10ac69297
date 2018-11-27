@@ -1,0 +1,14 @@
+package com.niit.dto;
+
+@Entity
+@Table
+@SequenceGenerator(name="friendidseq",sequenceName="friend_id_sequence")
+public class Friend {
+
+	 @Id
+	    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator="friendidseq")
+	    private int friendId;
+	    private String loginName;
+	    private String friendLoginName;
+	    private String status;
+}

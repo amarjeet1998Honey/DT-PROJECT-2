@@ -1,0 +1,8 @@
+package com.niit.dto;
+
+@Entity
+@Table
+@SequenceGenerator(name="friendidseq",sequenceName="friend_id_sequence")
+public class Friend {
+
+}

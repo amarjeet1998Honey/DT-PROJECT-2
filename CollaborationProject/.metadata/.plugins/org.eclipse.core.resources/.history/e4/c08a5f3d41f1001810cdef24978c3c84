@@ -1,0 +1,19 @@
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+public class Friend {
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private int id;
+     
+    @ManyToOne
+    private User fromId;
+     
+     
+    @ManyToOne
+    private User toId;
+     
+    private char status;
